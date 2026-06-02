@@ -1,0 +1,30 @@
+{
+  "name": "ai-legal-assistant-backend",
+  "version": "1.0.0",
+  "description": "Backend API for AI Legal Assistant - Legal guidance platform for Indian citizens",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["legal", "assistant", "ai", "india", "law"],
+  "author": "AI Legal Assistant Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.6.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "helmet": "^8.2.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.1.1",
+    "winston": "^3.19.0",
+    "express-rate-limit": "^7.1.5",
+    "@google/generative-ai": "^0.3.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

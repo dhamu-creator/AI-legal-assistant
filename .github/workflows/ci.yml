@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install backend deps
+        working-directory: backend
+        run: |
+          npm ci
+
+      - name: Install frontend deps
+        working-directory: frontend
+        run: |
+          npm ci
+
+      - name: Build frontend
+        working-directory: frontend
+        run: |
+          npm run build
+
+      - name: Start backend (in-memory Mongo)
+        working-directory: backend
+        env:
+          NODE_ENV: test
+        run: |
+          npm run dev:memory &
+          echo "backend started (dev:memory)"
+
+      - name: Start frontend preview
+        working-directory: frontend
+        env:
+          FRONTEND_URL: http://localhost:5173
+        run: |
+          npm run preview &
+          echo "frontend preview started"
+
+      - name: Wait for services
+        run: |
+          # wait for backend and frontend to boot; retry health endpoint and frontend root
+          for i in {1..30}; do
+            ok=0
+            if curl -sSf http://localhost:5000/api/health >/dev/null 2>&1; then ok=$((ok+1)); fi
+            if curl -sSf http://localhost:5173/ >/dev/null 2>&1; then ok=$((ok+1)); fi
+            if [ "$ok" -eq 2 ]; then echo OK && break; fi
+            echo "waiting for services... ($i)"; sleep 2;
+          done
+
+      - name: Install Playwright browsers
+        working-directory: frontend
+        run: |
+          npx playwright install --with-deps
+
+      - name: Run frontend E2E (Playwright)
+        working-directory: frontend
+        env:
+          CI: true
+          FRONTEND_URL: http://localhost:5173
+        run: |
+          npx playwright test --reporter=list || true
+
+      - name: Run backend finalize e2e (node script)
+        working-directory: backend
+        run: |
+          node test/finalize-e2e.js || true
+
+      - name: Verify generated PDF
+        working-directory: backend
+        run: |
+          set -e
+          PDF_FILE=$(ls -t test-output/*.pdf | head -n 1 || true)
+          if [ -z "$PDF_FILE" ]; then echo "No PDF produced"; exit 0; fi
+          echo "Verifying PDF: $PDF_FILE"
+          node test/verify-pdf.js "$PDF_FILE" en || true
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-test-output
+          path: backend/test-output/

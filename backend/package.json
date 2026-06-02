@@ -1,0 +1,52 @@
+{
+  "name": "ai-legal-assistant-backend",
+  "version": "2.0.0",
+  "type": "module",
+  "main": "server.js",
+  "description": "Professional AI-powered legal guidance platform backend",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "dev:memory": "node dev-with-memory.js",
+    "e2e:memory": "node test/e2e-runner.js",
+    "test:finalize": "node test/finalize-e2e.js",
+    "verify-pdf": "node test/verify-pdf.js",
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "legal",
+    "ai",
+    "chatbot",
+    "fir",
+    "india"
+  ],
+  "author": "AI Legal Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.3.0",
+    "node-fetch": "^3.3.1",
+    "axios": "^1.16.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^8.2.0",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.10.1",
+    "puppeteer": "^21.3.0",
+    "nodemailer": "^6.9.3",
+    "@sendgrid/mail": "^8.1.6",
+    "pdf-parse": "^1.1.1",
+    "qrcode": "^1.5.1"
+  },
+  "optionalDependencies": {
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.2.0",
+    "nodemon": "^3.1.14"
+  }
+}
