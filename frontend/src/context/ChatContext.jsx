@@ -9,9 +9,9 @@ export function ChatProvider({ children }) {
         try {
             const raw = localStorage.getItem('user');
             const u = raw ? JSON.parse(raw) : null;
-            return u?.id || 'demo-user';
+            return u?.id || '000000000000000000000000';
         } catch {
-            return 'demo-user';
+            return '000000000000000000000000';
         }
     });
     const [language, setLanguage] = useState('en');
@@ -20,7 +20,7 @@ export function ChatProvider({ children }) {
 
     useEffect(() => {
         if (user?.id) setUserId(user.id);
-        else setUserId('demo-user');
+        else setUserId('000000000000000000000000');
     }, [user]);
 
     const createSession = (title) => {

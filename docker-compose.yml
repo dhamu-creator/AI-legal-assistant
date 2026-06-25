@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./python_backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URI=mongodb://database_host:27017/legal_db
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    depends_on:
+      - database_host
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: always
+
+  database_host:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - production_db_volume:/data/db
+    restart: always
+
+volumes:
+  production_db_volume:

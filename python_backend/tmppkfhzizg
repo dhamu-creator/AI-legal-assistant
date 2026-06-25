@@ -1,0 +1,1025 @@
+{
+  "users": {
+    "5c5694131f19407cbf602576": {
+      "_id": "5c5694131f19407cbf602576",
+      "id": "5c5694131f19407cbf602576",
+      "name": "Test User",
+      "email": "test1780560851@test.com",
+      "password": "$2b$12$a1Tiyv5u00nDckfXwSXrWui3nUtVb/VFl94lujWiQcMaI5iJtMNnC",
+      "language": "en",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-04T13:44:13.998048"
+    },
+    "f3c72b66a1b64172b05cabf9": {
+      "_id": "f3c72b66a1b64172b05cabf9",
+      "id": "f3c72b66a1b64172b05cabf9",
+      "name": "Test User",
+      "email": "test1780561566@test.com",
+      "password": "$2b$12$j60wehWSmlmDNqj8idgYreRQJ9z6xyp7XzkodVthc8jQB/itxeWm.",
+      "language": "en",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-04T13:56:08.211751"
+    },
+    "eb3cc761cc1b4d208cd943e5": {
+      "_id": "eb3cc761cc1b4d208cd943e5",
+      "id": "eb3cc761cc1b4d208cd943e5",
+      "name": "Test User",
+      "email": "test1780563180@test.com",
+      "password": "$2b$12$MpOJ8QEfJe9oNyS8wQyxP.yWyFwAXP4/d7kLe76MJoVExOEtacEnm",
+      "language": "en",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-04T14:23:02.930612"
+    },
+    "f4df1bd64caf417b9fe7ef16": {
+      "_id": "f4df1bd64caf417b9fe7ef16",
+      "id": "f4df1bd64caf417b9fe7ef16",
+      "name": "Test User",
+      "email": "test1781064680@test.com",
+      "password": "$2b$12$puRmJJKwMpU2NnEj9x9egOUdtmCrMlI6oyWCOi79/TTGsmRooXWmm",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "f4df1b",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-10T09:41:23.014596"
+    },
+    "a020d0b1f0ed43c98b6ece5a": {
+      "_id": "a020d0b1f0ed43c98b6ece5a",
+      "id": "a020d0b1f0ed43c98b6ece5a",
+      "name": "Dhamu",
+      "email": "dhamu072006@gmail.com",
+      "password": "$2b$12$PLRUb6v7B83MDR/CZOMIcuEJEyLtNqaky00bf4QnUvDkqb7kS1PaS",
+      "language": "en",
+      "role": "admin",
+      "mfaEnabled": false,
+      "mfaSecret": "3XESJCF25P644AVM25YDJ7Q6QW5IJ66T",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-11T13:52:14.433967"
+    },
+    "53e725c6ee4f49878d927742": {
+      "_id": "53e725c6ee4f49878d927742",
+      "id": "53e725c6ee4f49878d927742",
+      "name": "Test User",
+      "email": "test1781599193@test.com",
+      "password": "$2b$12$50d3/qAWLZZehlR1v7DOUOB87HkxMqszuF.1AQCUBNHGSGO.3SB8u",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "MZTGBTIG5B7H2JDI5H6ULZUVW3MDECQ3",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-16T14:09:55.930130"
+    },
+    "1fcae1710898462c92366136": {
+      "_id": "1fcae1710898462c92366136",
+      "id": "1fcae1710898462c92366136",
+      "name": "Test User",
+      "email": "test1781599665@test.com",
+      "password": "$2b$12$Pj.RrTImQ701p.rQt5Z5ZOZM5XnWO1xyuc7CAJ6/J.H59H0WOUKi2",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "IWGDX4FKARPY75O5AVT6U4P2EICMXIAF",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-16T14:17:48.487012"
+    },
+    "735436368e3148b289c372e5": {
+      "_id": "735436368e3148b289c372e5",
+      "id": "735436368e3148b289c372e5",
+      "name": "Test User",
+      "email": "test1781600722@test.com",
+      "password": "$2b$12$UuNO0htCiShKW3NwdD5k9.3HE1ktUVUZx8yRIBlAxb0lcserffe/S",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "A5DBCAVVSGANEVHYAJE3WNJMDJHLHIIN",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-16T14:35:24.692052"
+    },
+    "ab595a7d0004477693d9912f": {
+      "_id": "ab595a7d0004477693d9912f",
+      "id": "ab595a7d0004477693d9912f",
+      "name": "Test User",
+      "email": "test_legal_user@gmail.com",
+      "password": "$2b$12$5DunrHdLL.Dr.U/kpvxaNOGgbZDW5yI6429mf40NmLu8TdzwyD4U2",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "OST73YVKV6DXR4JFNOJYGVOKWEVF2Q7M",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-17T14:17:45.029165"
+    },
+    "c5057aeaba7d4d9f9372edb2": {
+      "_id": "c5057aeaba7d4d9f9372edb2",
+      "id": "c5057aeaba7d4d9f9372edb2",
+      "name": "PW Test",
+      "email": "pw+1781686924390@example.org",
+      "password": "$2b$12$n0y.X7tH8IbnvPhlAJzileqxYZFj/DCtoFaq0Q4.poqZK0g4Z8LE6",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "HSVREILQGPNBBBPOURQW4CEVGCKYGKY2",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-17T14:32:07.345142"
+    },
+    "731944eadcd446e09fa0377a": {
+      "_id": "731944eadcd446e09fa0377a",
+      "id": "731944eadcd446e09fa0377a",
+      "name": "Test User",
+      "email": "test1782297574@test.com",
+      "password": "$2b$12$Ht/YPm/xyHJzhTkVBqmB.u9U4L5CIg/lVwoaTTNlJh6u4gdVImV1C",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "OPE3FBTQSE6URILF4CJFDCZRUHE6I6IR",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-24T16:09:36.638666"
+    },
+    "675ef47bd7334fb18a33da7d": {
+      "_id": "675ef47bd7334fb18a33da7d",
+      "id": "675ef47bd7334fb18a33da7d",
+      "name": "Test User",
+      "email": "test1782297626@test.com",
+      "password": "$2b$12$jG7gYO8ZIdDE.S65/cVZhuMPSbvMJf/jQoXdksLJ7ftgRTStjAYZe",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "EHCRNGECQNY3EDK6NKEKD2O7JFGX7HIG",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-24T16:10:28.514910"
+    },
+    "eb4e615ff567472ba11b0159": {
+      "_id": "eb4e615ff567472ba11b0159",
+      "id": "eb4e615ff567472ba11b0159",
+      "name": "Test User",
+      "email": "test1782304574@test.com",
+      "password": "$2b$12$hpbQabisl63nXuJRWw8M.u3soLzN39OGQYh2Dc4m89GGFiaGcs8mi",
+      "language": "en",
+      "role": "user",
+      "mfaEnabled": false,
+      "mfaSecret": "WYOJPXWAXD6WGYK7F4ILGZZNOIC3WJR4",
+      "savedReports": [],
+      "chatSessions": [],
+      "preferences": {
+        "darkMode": false,
+        "notifications": true
+      },
+      "createdAt": "2026-06-24T18:06:16.470725"
+    }
+  },
+  "chat_sessions": {
+    "e183727f0fe64058b30d734f": {
+      "_id": "e183727f0fe64058b30d734f",
+      "id": "e183727f0fe64058b30d734f",
+      "userId": "",
+      "title": "Chat - 04/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I was robbed near my house last night",
+          "language": "en",
+          "createdAt": "2026-06-04T12:28:37.293291"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-04T12:28:37.760518"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-04T12:28:35.263732",
+      "updatedAt": "2026-06-04T12:28:37.760527",
+      "crimeCategory": "Theft"
+    },
+    "3c73273377244c4e8ce6e50d": {
+      "_id": "3c73273377244c4e8ce6e50d",
+      "id": "3c73273377244c4e8ce6e50d",
+      "userId": "5c5694131f19407cbf602576",
+      "title": "Chat - 04/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I was robbed near my house last night",
+          "language": "en",
+          "createdAt": "2026-06-04T13:44:20.154051"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-04T13:44:20.856599"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-04T13:44:18.100463",
+      "updatedAt": "2026-06-04T13:44:20.856612",
+      "crimeCategory": "Theft"
+    },
+    "3c3268b991944821b2b9cb92": {
+      "_id": "3c3268b991944821b2b9cb92",
+      "id": "3c3268b991944821b2b9cb92",
+      "userId": "f3c72b66a1b64172b05cabf9",
+      "title": "Chat - 04/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I was robbed near my house last night",
+          "language": "en",
+          "createdAt": "2026-06-04T13:56:14.356826"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-04T13:56:19.434608"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-04T13:56:12.321144",
+      "updatedAt": "2026-06-04T13:56:19.434620",
+      "crimeCategory": "Theft"
+    },
+    "6894fad7bff1412ebcf5c528": {
+      "_id": "6894fad7bff1412ebcf5c528",
+      "id": "6894fad7bff1412ebcf5c528",
+      "userId": "eb3cc761cc1b4d208cd943e5",
+      "title": "Chat - 04/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I was robbed near my house last night",
+          "language": "en",
+          "createdAt": "2026-06-04T14:23:09.035331"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-04T14:23:09.706633"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-04T14:23:07.007276",
+      "updatedAt": "2026-06-04T14:23:09.706643",
+      "crimeCategory": "Theft"
+    },
+    "8bad4373db7f474aaf1a1e87": {
+      "_id": "8bad4373db7f474aaf1a1e87",
+      "id": "8bad4373db7f474aaf1a1e87",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 05/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-05T09:34:31.381363",
+      "updatedAt": "2026-06-05T09:34:31.381367"
+    },
+    "ead01f2f6c5246ff80bff3f0": {
+      "_id": "ead01f2f6c5246ff80bff3f0",
+      "id": "ead01f2f6c5246ff80bff3f0",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 05/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My phone was stolen in a bus stand",
+          "language": "en",
+          "createdAt": "2026-06-05T09:34:41.034632"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-05T09:34:41.502658"
+        },
+        {
+          "role": "user",
+          "content": "hey yesterday i wait for local train in coimbatore junction at the time of 9pm.during that time 2 persons covered their face with black mask robbed my purse from me what shoud i do/",
+          "language": "en",
+          "createdAt": "2026-06-05T09:36:32.319179"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-05T09:36:34.814959"
+        },
+        {
+          "role": "user",
+          "content": "hi",
+          "language": "ta",
+          "createdAt": "2026-06-05T09:36:54.390900"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "ta",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-05T09:36:54.821250"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-05T09:34:31.383139",
+      "updatedAt": "2026-06-05T09:36:54.821259",
+      "crimeCategory": "Theft"
+    },
+    "1237ebf32729495cbeea12d8": {
+      "_id": "1237ebf32729495cbeea12d8",
+      "id": "1237ebf32729495cbeea12d8",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 05/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-05T09:42:42.105015",
+      "updatedAt": "2026-06-05T09:42:42.105025"
+    },
+    "4e66c033947c40bf8baeb315": {
+      "_id": "4e66c033947c40bf8baeb315",
+      "id": "4e66c033947c40bf8baeb315",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 05/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "my bike stolen in chitra airport",
+          "language": "en",
+          "createdAt": "2026-06-05T09:43:07.174976"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-05T09:43:07.922471"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-05T09:42:42.117004",
+      "updatedAt": "2026-06-05T09:43:07.922488",
+      "crimeCategory": "Theft"
+    },
+    "7ffac261c9274d35b73f2479": {
+      "_id": "7ffac261c9274d35b73f2479",
+      "id": "7ffac261c9274d35b73f2479",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T16:23:35.041640",
+      "updatedAt": "2026-06-09T16:23:35.041655"
+    },
+    "22f439daf76e4267a0e213df": {
+      "_id": "22f439daf76e4267a0e213df",
+      "id": "22f439daf76e4267a0e213df",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "what to do i killed a person today in front of everybody",
+          "language": "en",
+          "createdAt": "2026-06-09T16:24:04.423167"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-09T16:24:05.106197"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T16:23:35.046438",
+      "updatedAt": "2026-06-09T16:24:05.106224",
+      "crimeCategory": "Theft"
+    },
+    "f8c273cd1a0347cca4d29c1d": {
+      "_id": "f8c273cd1a0347cca4d29c1d",
+      "id": "f8c273cd1a0347cca4d29c1d",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T18:38:35.135330",
+      "updatedAt": "2026-06-09T18:38:35.135341"
+    },
+    "bbc5d9216cb24e1da0417d89": {
+      "_id": "bbc5d9216cb24e1da0417d89",
+      "id": "bbc5d9216cb24e1da0417d89",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "How do I file a police complaint?",
+          "language": "en",
+          "createdAt": "2026-06-09T18:38:45.340824"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Harassment: Please file an FIR at your nearest police station. Relevant sections: IPC 354, IPC 509, BNS 74.",
+          "language": "en",
+          "detectedCrimeCategory": "Harassment",
+          "relevantIPCSection": "IPC 354",
+          "sourceDocuments": [
+            "IPC 354",
+            "IPC 509",
+            "BNS 74"
+          ],
+          "createdAt": "2026-06-09T18:39:09.928226"
+        },
+        {
+          "role": "user",
+          "content": "seridaa sunni",
+          "language": "en",
+          "createdAt": "2026-06-09T18:39:31.555288"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station. Relevant sections: IPC 379, IPC 380, BNS 303.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "IPC 379",
+          "sourceDocuments": [
+            "IPC 379",
+            "IPC 380",
+            "BNS 303"
+          ],
+          "createdAt": "2026-06-09T18:39:37.086471"
+        }
+      ],
+      "ipcSections": [
+        "IPC 379",
+        "IPC 380",
+        "BNS 303"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T18:38:35.139072",
+      "updatedAt": "2026-06-09T18:39:37.086488",
+      "crimeCategory": "Theft"
+    },
+    "b90a9945c8c6440d91284e95": {
+      "_id": "b90a9945c8c6440d91284e95",
+      "id": "b90a9945c8c6440d91284e95",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T18:51:54.125419",
+      "updatedAt": "2026-06-09T18:51:54.125430"
+    },
+    "27f8cc2da6474be7ab63e1f9": {
+      "_id": "27f8cc2da6474be7ab63e1f9",
+      "id": "27f8cc2da6474be7ab63e1f9",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 09/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I received a threatening call from an unknown number",
+          "language": "en",
+          "createdAt": "2026-06-09T18:52:14.057698"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Blackmail: Please file an FIR at your nearest police station under BNSS Section 173. Applicable sections: BNS 308.",
+          "language": "en",
+          "detectedCrimeCategory": "Blackmail",
+          "relevantIPCSection": "BNS 308",
+          "sourceDocuments": [
+            "BNS 308"
+          ],
+          "createdAt": "2026-06-09T18:52:18.357220"
+        }
+      ],
+      "ipcSections": [
+        "BNS 308"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-09T18:51:54.129618",
+      "updatedAt": "2026-06-09T18:52:18.357237",
+      "crimeCategory": "Blackmail"
+    },
+    "519d22406e384c7a989160ef": {
+      "_id": "519d22406e384c7a989160ef",
+      "id": "519d22406e384c7a989160ef",
+      "userId": "f4df1bd64caf417b9fe7ef16",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I was robbed near my house last night",
+          "language": "en",
+          "createdAt": "2026-06-10T09:41:29.379496"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Theft: Please file an FIR at your nearest police station under BNSS Section 173. Applicable sections: BNS 303, BNS 305.",
+          "language": "en",
+          "detectedCrimeCategory": "Theft",
+          "relevantIPCSection": "BNS 303",
+          "sourceDocuments": [
+            "BNS 303",
+            "BNS 305"
+          ],
+          "createdAt": "2026-06-10T09:41:31.812168"
+        }
+      ],
+      "ipcSections": [
+        "BNS 303",
+        "BNS 305"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T09:41:27.323502",
+      "updatedAt": "2026-06-10T09:41:31.812180",
+      "crimeCategory": "Theft"
+    },
+    "733df9cfb2b547b79178f13d": {
+      "_id": "733df9cfb2b547b79178f13d",
+      "id": "733df9cfb2b547b79178f13d",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T09:59:21.732924",
+      "updatedAt": "2026-06-10T09:59:21.732928"
+    },
+    "d0853eea4a9b4c6dbfff399b": {
+      "_id": "d0853eea4a9b4c6dbfff399b",
+      "id": "d0853eea4a9b4c6dbfff399b",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": " received a threatening call from an unknown number",
+          "language": "en",
+          "createdAt": "2026-06-10T09:59:38.103810"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm very sorry to hear you've received a threatening call from an unknown number. It's an unsettling and distressing experience, and you absolutely have rights and avenues for protection under Indian law. Please know that help is available.\n\nTo provide you with the most precise guidance, could you please clarify one or two points about the call?\n\n1.  **What was the general nature of the threat?** (e.g., threat of physical harm, damage to property, reputational harm, financial demand, or something else specific?)\n2.  **Was this a one-time incident, or have you received multiple such calls/messages?**\n\nIn the meantime, based on your description, here's an overview of the legal framework and steps you can take:\n\n---\n\n### Understanding the Crime and Your Rights\n\n#### 1. What This Crime Means Legally Under Bharatiya Nyaya Sanhita (BNS)\n\nA threatening call, depending on its specific content and intent, can fall under various provisions of the Bharatiya Nyaya Sanhita (BNS). The sections you've mentioned are highly relevant:\n\n*   **BNS Section 74 (Criminal Intimidation):** This is the most direct fit. It criminalizes threatening another person with any injury to their person, reputation, or property, or to the person or reputation of anyone in whom that person is interested, with the intent to cause alarm, or to cause that person to do an act which they are not legally bound to do, or to omit to do an act which they are legally entitled to do. A threatening call directly aims to create fear and influence your actions.\n*   **BNS Section 75 (Voluntarily Causing Hurt):** While a call itself doesn't cause physical hurt, if the threat was specifically about causing physical injury and intended to create fear of such injury, or if any subsequent action by the caller leads to actual hurt, this section could become relevant for the *actual act* of causing hurt or for attempts/conspiracy related to it. However, for the *threat* itself, BNS 74 is primary.\n*   **BNS Section 78 (Assault or use of criminal force with intent to dishonour or outrage modesty):** This section applies if the threatening call involved specific threats of assault, use of criminal force, or language/intent to dishonour or outrage your modesty, particularly if the threat has a sexual or gender-based connotation.\n\n#### 2. Victim's Rights Under Current Law\n\nAs a victim of harassment and intimidation under the Bharatiya Nagarik Suraksha Sanhita (BNSS), you have several important rights:\n\n*   **Right to Lodge a First Information Report (FIR):** You have the right to report the incident to the police, and they are legally bound to register your complaint, especially if it discloses a cognizable offense (like criminal intimidation).\n*   **Right to Information:** You have the right to receive a copy of the FIR free of cost and to be kept informed about the progress of the investigation (BNSS Section 434).\n*   **Right to Protection:** The police are obligated to ensure your safety and protect you from further harassment or threats. If necessary, you can seek protective orders.\n*   **Right to Legal Aid:** If you cannot afford a lawyer, you have a right to free legal aid from the moment you are arrested or appear before a Magistrate, or as a victim in certain circumstances (BNSS Section 308).\n*   **Right to Compensation:** In certain cases, if you suffer loss or injury as a result of the crime, you may be entitled to compensation through victim compensation schemes (BNSS Section 396, 397).\n*   **Right to Zero FIR:** You can file an FIR at any police station, regardless of where the incident occurred. The police station cannot refuse to register your complaint on jurisdictional grounds.\n\n#### 3. Steps to File an FIR Under BNSS Section 173 (Including Zero FIR)\n\nFiling an FIR (First Information Report) is the first crucial step to initiate a police investigation. BNSS Section 173 outlines the procedure for recording information in cognizable cases.\n\n**How to File an FIR:**\n\n1.  **Approach Any Police Station:** You can go to any police station, even if the incident did not occur within its territorial jurisdiction (this is known as a **Zero FIR**). The police cannot refuse to register your complaint.\n2.  **State Your Complaint:** Clearly narrate the entire incident to the police officer.\n    *   **Details to provide:** Date and time of the call, the unknown number from which you received the call, the exact words or nature of the threat, any previous related incidents, and any other relevant information.\n    *   If you have recorded the call or saved any messages, provide them as evidence.\n3.  **Get it Recorded in Writing:** The officer will record your statement. Ensure it accurately reflects what you said. If you can write, you can write the complaint yourself and submit it.\n4.  **Read and Verify:** Once recorded, the statement will be read back to you. Carefully review it for accuracy. Make sure all details are correct.\n5.  **Sign the Statement:** After verifying, sign the statement.\n6.  **Demand a Copy:** **It is your right to receive a free copy of the registered FIR immediately.** BNSS Section 173 mandates this. Do not leave the police station without obtaining your copy. This copy will have the FIR number, which you'll need for future reference.\n\n**Zero FIR (BNSS Section 173(1)):**\nA Zero FIR means that a police station, irrespective of its geographical jurisdiction, must register an FIR for any cognizable offense reported to it. After registration, this FIR is then transferred to the police station that has the appropriate jurisdiction for further investigation. This provision ensures that victims are not turned away by police stations on grounds of jurisdiction and that their complaints are recorded without delay.\n\n#### 4. Relevant BNS/BNSS/IT Act Sections with Brief Explanations\n\n*   **Bharatiya Nyaya Sanhita (BNS):**\n    *   **Section 74 (Criminal Intimidation):** Punishes anyone who commits criminal intimidation. The punishment varies based on the nature of the threat, but generally involves imprisonment for up to two years, or fine, or both. If the threat is to cause death or grievous hurt, or to destroy property by fire, or to impute unchastity to a woman, or to cause a person to refrain from seeking legal protection, the punishment can be higher (up to seven years imprisonment).\n    *   **Section 75 (Voluntarily Causing Hurt):** Defines and punishes causing bodily pain, disease, or infirmity to any person. Punishment can be up to one year of imprisonment, or a fine of up to ten thousand rupees, or both.\n    *   **Section 78 (Assault or use of criminal force with intent to dishonour or outrage modesty):** Punishes anyone who assaults or uses criminal force on any person, intending to dishonour that person or knowing that it is likely to outrage their modesty. Imprisonment can extend to two years, or fine, or both.\n\n*   **Bharatiya Nagarik Suraksha Sanhita (BNSS):**\n    *   **Section 173 (Information as to cognizable cases):** This section lays down the procedure for police officers to receive and record information regarding the commission of a cognizable offense, which forms the basis of the FIR. It also mandates providing a copy of the FIR to the complainant.\n    *   **Section 174 (Procedure for investigation):** Details the powers of the police officer to investigate the case, including the power to arrest without a warrant and gather evidence, once an FIR has been registered.\n    *   **Section 434 (Victim to be informed about progress of case):** This crucial section mandates that the investigating officer or the station house officer shall inform the victim or their legal representative about the progress of the investigation and the status of the case.\n\n*   **Information Technology (IT) Act, 2000:**\n    *   If the threatening call was made via a Voice over Internet Protocol (VoIP) service, or if associated digital messages/data were involved, sections of the IT Act could be relevant for investigating cyber-related aspects. For instance, **Section 66 (Computer related offences)** or **Section 67 (Publishing or transmitting obscene material in electronic form)** if the threats involved such content.\n\n#### 5. Emergency Contacts\n\n*   **Police (All India Emergency Number):** **112** (This number connects to Police, Fire, and Ambulance services).\n*   **National Commission for Women (NCW) Helpline:** **7827170170** (for women facing harassment or violence).\n*   **Cyber Crime Helpline:** **1930** (for cyber-related offenses, including online harassment). You can also report online at www.cybercrime.gov.in.\n\n---\n\nRemember to keep calm, collect any evidence you might have (screenshots of call logs, recordings if possible), and take the step of filing an FIR.\n\n**Disclaimer:** This information is for general guidance only and not a substitute for professional legal advice. It is highly recommended to consult with a qualified lawyer to discuss the specifics of your situation and receive tailored advice.",
+          "language": "en",
+          "detectedCrimeCategory": "Harassment",
+          "relevantIPCSection": "BNS 74",
+          "sourceDocuments": [
+            "BNS 74",
+            "BNS 75",
+            "BNS 78"
+          ],
+          "createdAt": "2026-06-10T10:00:00.514241"
+        },
+        {
+          "role": "user",
+          "content": "so i killed a person what should you know",
+          "language": "en",
+          "createdAt": "2026-06-10T10:22:09.925351"
+        },
+        {
+          "role": "assistant",
+          "content": "Legal guidance for Murder: Please file an FIR at your nearest police station under BNSS Section 173. Applicable sections: BNS 101, BNS 103.",
+          "language": "en",
+          "detectedCrimeCategory": "Murder",
+          "relevantIPCSection": "BNS 101",
+          "sourceDocuments": [
+            "BNS 101",
+            "BNS 103"
+          ],
+          "createdAt": "2026-06-10T10:22:20.790595"
+        },
+        {
+          "role": "user",
+          "content": "how should i excape the case",
+          "language": "en",
+          "createdAt": "2026-06-10T10:22:41.307028"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're looking for information on how to handle a legal situation, or as you put it, 'escape a case.' Navigating the legal system can be complex, and understanding the process is the first crucial step, whether you are seeking justice, defending yourself, or simply trying to understand your rights and options.\n\nIn India, a legal case, especially a criminal one, often begins with the registration of a First Information Report (FIR). Here's a breakdown of the process and your rights:\n\n**1. Filing a First Information Report (FIR) under the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023:**\n\n*   **What is an FIR?** An FIR is a document prepared by the police when they receive information about the commission of a cognizable offence (an offence for which the police can arrest without a warrant). It's the first step in a criminal investigation.\n*   **How to File (BNSS Section 173):**\n    *   If you have information about a cognizable offence, you can report it to the officer-in-charge of a police station, either orally or in writing.\n    *   If given orally, the police officer must reduce it to writing and read it back to you.\n    *   You, as the informant, must then sign this written information.\n    *   The substance of this information will be entered into a specific register maintained at the police station.\n*   **Zero FIR Provision:**\n    *   You have the right to file an FIR at **ANY police station**, regardless of where the incident occurred. This is known as a \"Zero FIR.\"\n    *   The police station receiving the Zero FIR will register it and then transfer it to the police station that has the appropriate jurisdiction for investigation. This ensures that no delay occurs in registering a complaint, especially in urgent situations.\n\n**2. What Happens After Filing the FIR:**\n\n*   **Investigation:** Once an FIR is registered, the police are mandated to commence an investigation into the reported incident. This involves collecting evidence, examining witnesses, and potentially interrogating individuals.\n*   **Arrest (if applicable):** If the investigation reveals sufficient grounds, the police may arrest the accused person(s) in accordance with the provisions of BNSS.\n*   **Police Report (Charge Sheet/Final Report):** Upon completion of the investigation (usually within 60 or 90 days depending on the nature of the offence, as per BNSS provisions), the police will prepare a report.\n    *   If the investigation reveals sufficient evidence to prosecute, a **charge sheet** (under BNSS Section 193) is filed in court.\n    *   If there isn't enough evidence or the case is deemed false, a **final report** (or closure report) is filed, recommending closure of the case.\n*   **Court Proceedings:** If a charge sheet is filed, the court will take cognizance of the offence, and the judicial process, including trial, will begin.\n\n**3. Your Right to a Free FIR Copy:**\n\n*   As per BNSS Section 173(1), you have the right to receive a copy of the FIR **immediately and free of cost** from the police station where it was registered. This copy is essential for you to track the progress of your case.\n\n**4. Relevant Helpline Numbers:**\n\nIf you need urgent assistance or wish to report a situation:\n\n*   **Police Emergency:** 112 (All India Emergency Number)\n*   **Women's Helpline:** 1098 (Childline India) or 1090 (Women Power Line - specific states)\n*   **Cybercrime Helpline:** 1930\n*   **National Commission for Women (NCW) Helpline:** 7827170170 (for complaints related to women)\n\nUnderstanding these initial steps can help you navigate the legal system more effectively. Remember that your rights are protected by law.\n\n**Disclaimer:** This information is for general awareness and educational purposes only. The Indian legal system is complex, and specific advice depends on the unique facts and circumstances of each case. It is always strongly recommended to consult with a qualified lawyer for personalized legal advice and assistance regarding your specific situation.",
+          "language": "en",
+          "detectedCrimeCategory": "GeneralInquiry",
+          "relevantIPCSection": "BNSS 173",
+          "sourceDocuments": [
+            "BNSS 173"
+          ],
+          "createdAt": "2026-06-10T10:23:04.057789"
+        }
+      ],
+      "ipcSections": [
+        "BNSS 173"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T09:59:21.734869",
+      "updatedAt": "2026-06-10T10:23:04.057800",
+      "crimeCategory": "GeneralInquiry"
+    },
+    "e392916b1a0248ffae1ba1ae": {
+      "_id": "e392916b1a0248ffae1ba1ae",
+      "id": "e392916b1a0248ffae1ba1ae",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:00:43.108768",
+      "updatedAt": "2026-06-10T11:00:43.108781"
+    },
+    "47b46b2ec21c473d9addeb6c": {
+      "_id": "47b46b2ec21c473d9addeb6c",
+      "id": "47b46b2ec21c473d9addeb6c",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "machi naa oruthana nethu konnuten kaaranam(classla pakkathula okkaandhu mokka joke potutu irundhaan naa takkunu tension aagi avana yenna pen vachi kaluthula kutthi konnuten) yenaku andha thappula irundhu thappikanum please help me. ",
+          "language": "en",
+          "createdAt": "2026-06-10T11:02:32.194003"
+        },
+        {
+          "role": "assistant",
+          "content": "It sounds like you're in a very serious and distressing situation. The act you've described, causing someone's death by stabbing them, is considered a grave offense under the Bharatiya Nyaya Sanhita (BNS).\n\nWhen you ask how to \"escape from this mistake,\" in legal terms, this means building a strong defense and navigating the justice system. Here's what that involves:\n\n1.  **Immediate Legal Counsel**: Your absolute first step must be to consult an experienced criminal defense lawyer *immediately*. They are the only ones who can properly advise you on your rights, the specific charges you might face, and how to proceed. Do not make any statements to anyone, especially law enforcement, without a lawyer present.\n2.  **Understanding the Charges**: Based on your description, this would likely be investigated as a case of murder under the BNS. A lawyer will help you understand the gravity and implications.\n3.  **Bail**: If you are arrested, your lawyer will be crucial in applying for bail under the Bharatiya Nagarik Suraksha Sanhita (BNSS). Bail allows you to be released from custody while your case proceeds, though it can be challenging to obtain in very serious cases like this.\n4.  **Legal Defense Strategy**: A lawyer will carefully examine all the facts and circumstances you've mentioned – the \"silly jokes,\" your sudden \"tension,\" and how the incident unfolded. They will explore whether any legal defenses or mitigating circumstances can be argued in court. For instance, they would assess if elements like \"sudden and grave provocation\" or lack of intention to cause death could be argued to potentially reduce the severity of the charge, though establishing such a defense in a fatal stabbing can be complex.\n5.  **Court Process**: Your lawyer will represent you throughout the entire court process, present your defense, cross-examine witnesses, and argue on your behalf with the goal of an acquittal, or to mitigate the charges and potential sentence based on the evidence.\n\nAttempting to navigate a case of this magnitude without expert legal representation would be extremely risky. Please prioritize speaking with a lawyer as soon as possible.\n\n*Disclaimer: This information is for general guidance and not legal advice. You must consult with a qualified legal professional for advice specific to your situation.*",
+          "language": "en",
+          "detectedCrimeCategory": "GeneralInquiry",
+          "relevantIPCSection": "BNSS 173",
+          "sourceDocuments": [
+            "BNSS 173"
+          ],
+          "createdAt": "2026-06-10T11:02:43.915559"
+        },
+        {
+          "role": "user",
+          "content": "i need illegal ideas",
+          "language": "en",
+          "createdAt": "2026-06-10T11:05:36.947502"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're looking for solutions, but as an AI legal assistant, I can only provide guidance and information that is strictly within the bounds of the law. My purpose is to help you understand legal processes and options that are ethical and compliant with Indian statutes.\n\nI cannot provide \"illegal ideas\" or advice that would involve breaking the law, as that goes against my core function and ethical guidelines. My primary advice remains to focus on legitimate legal defenses and procedures, which is why immediate legal counsel is crucial for your situation.\n\n*Disclaimer: This information is for educational purposes only and not a substitute for professional legal advice.*",
+          "language": "en",
+          "detectedCrimeCategory": "GeneralInquiry",
+          "relevantIPCSection": "BNSS 173",
+          "sourceDocuments": [
+            "BNSS 173"
+          ],
+          "createdAt": "2026-06-10T11:05:51.507515"
+        },
+        {
+          "role": "user",
+          "content": "hey you working good now i just check you",
+          "language": "en",
+          "createdAt": "2026-06-10T11:07:04.781883"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're asking about: \"hey you working good now i just check you\". Unfortunately, I'm having trouble connecting to my AI service right now. Please try again in a moment. If urgent, contact Police (100) or Emergency (112).",
+          "language": "en",
+          "detectedCrimeCategory": "GeneralInquiry",
+          "relevantIPCSection": "BNSS 173",
+          "sourceDocuments": [
+            "BNSS 173"
+          ],
+          "createdAt": "2026-06-10T11:07:11.744189"
+        },
+        {
+          "role": "user",
+          "content": "hey yesterday i stand i a local train in coimbatore at 9 pm to go to my home. in that time 2 members weared black mask in their face threatned me and collected my purse with amount of 5000 and my i-phone 17 pro max mobile. what should i do please i need your suggestion",
+          "language": "en",
+          "createdAt": "2026-06-10T11:09:32.948605"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're asking about: \"hey yesterday i stand i a local train in coimbatore at 9 pm to go to my home. in that time 2 members weared black mask in their face threatned me and collected my purse with amount of 5000 and my i-phone 17 pro max mobile. what should i do please i need your suggestion\". Unfortunately, I'm having trouble connecting to my AI service right now. Please try again in a moment. If urgent, contact Police (100) or Emergency (112).",
+          "language": "en",
+          "detectedCrimeCategory": "Blackmail",
+          "relevantIPCSection": "BNS 308",
+          "sourceDocuments": [
+            "BNS 308"
+          ],
+          "createdAt": "2026-06-10T11:09:34.049594"
+        }
+      ],
+      "ipcSections": [
+        "BNS 308"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:00:43.111005",
+      "updatedAt": "2026-06-10T11:09:34.049613",
+      "crimeCategory": "Blackmail"
+    },
+    "f6ed5b4da89742818475da17": {
+      "_id": "f6ed5b4da89742818475da17",
+      "id": "f6ed5b4da89742818475da17",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:36:56.449703",
+      "updatedAt": "2026-06-10T11:36:56.449711"
+    },
+    "dd224e649b5541749950dd9e": {
+      "_id": "dd224e649b5541749950dd9e",
+      "id": "dd224e649b5541749950dd9e",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "\"Hey yesterday I stand in a local train in Coimbatore at 9 PM to go to my home. In that time 2 members weared black mask in their face threatened me and collected my purse with amount of 5000 and my iPhone 17 pro max mobile. What should I do please I need your suggestion\"",
+          "language": "en",
+          "createdAt": "2026-06-10T11:37:00.353258"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're asking about: \"\"Hey yesterday I stand in a local train in Coimbatore at 9 PM to go to my home. In that time 2 members weared black mask in their face threatened me and collected my purse with amount of 5000 and my iPhone 17 pro max mobile. What should I do please I need your suggestion\"\". Unfortunately, I'm having trouble connecting to my AI service right now. Please try again in a moment. If urgent, contact Police (100) or Emergency (112).",
+          "language": "en",
+          "detectedCrimeCategory": "Blackmail",
+          "relevantIPCSection": "BNS 308",
+          "sourceDocuments": [
+            "BNS 308"
+          ],
+          "createdAt": "2026-06-10T11:37:00.839126"
+        }
+      ],
+      "ipcSections": [
+        "BNS 308"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:36:56.452755",
+      "updatedAt": "2026-06-10T11:37:00.839142",
+      "crimeCategory": "Blackmail"
+    },
+    "72ad94c8a0e343de84e68308": {
+      "_id": "72ad94c8a0e343de84e68308",
+      "id": "72ad94c8a0e343de84e68308",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "\"Hey yesterday I stand in a local train in Coimbatore at 9 PM to go to my home. In that time 2 members weared black mask in their face threatened me and collected my purse with amount of 5000 and my iPhone 17 pro max mobile. What should I do please I need your suggestion\"",
+          "language": "en",
+          "createdAt": "2026-06-10T11:55:40.591877"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you're asking about: \"\"Hey yesterday I stand in a local train in Coimbatore at 9 PM to go to my home. In that time 2 members weared black mask in their face threatened me and collected my purse with amount of 5000 and my iPhone 17 pro max mobile. What should I do please I need your suggestion\"\". Unfortunately, I'm having trouble connecting to my AI service right now. Please try again in a moment. If urgent, contact Police (100) or Emergency (112).",
+          "language": "en",
+          "detectedCrimeCategory": "Blackmail",
+          "relevantIPCSection": "BNS 308",
+          "sourceDocuments": [
+            "BNS 308"
+          ],
+          "createdAt": "2026-06-10T11:55:41.128527"
+        }
+      ],
+      "ipcSections": [
+        "BNS 308"
+      ],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:55:10.939654",
+      "updatedAt": "2026-06-10T11:55:41.128548",
+      "crimeCategory": "Blackmail"
+    },
+    "771e8087447c489a802eea78": {
+      "_id": "771e8087447c489a802eea78",
+      "id": "771e8087447c489a802eea78",
+      "userId": "000000000000000000000000",
+      "title": "Chat - 10/06/2026",
+      "language": "en",
+      "messages": [],
+      "ipcSections": [],
+      "bnsSections": [],
+      "confidenceScore": 0,
+      "isResolved": false,
+      "createdAt": "2026-06-10T11:55:10.942350",
+      "updatedAt": "2026-06-10T11:55:10.942368"
+    },
+    

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DocumentTextIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { firAPI } from '../services/api';
 import { useChat } from '../context/ChatContext';
@@ -19,10 +20,15 @@ const crimeCategoryOptions = [
 ];
 
 export default function FIRGenerator() {
+    const { t, i18n } = useTranslation();
     const [step, setStep] = useState(1);
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState(i18n.language || 'en');
     const [loading, setLoading] = useState(false);
     const [firDraft, setFirDraft] = useState('');
+
+    useEffect(() => {
+        setLanguage(i18n.language || 'en');
+    }, [i18n.language]);
     const [formData, setFormData] = useState({
         title: '',
         incidentDetails: '',
@@ -84,7 +90,7 @@ export default function FIRGenerator() {
 
         setLoading(true);
         try {
-            const response = await firAPI.generateDraft(userId || 'demo-user', formData, language);
+            const response = await firAPI.generateDraft(userId || '000000000000000000000000', formData, language);
             setFirDraft(response.data.data.firDraft);
             setStep(4);
         } catch (error) {
@@ -121,8 +127,8 @@ export default function FIRGenerator() {
                 firDraft,
             };
 
-            // Use the logged-in user id from context (falls back to demo-user)
-            const res = await firAPI.createFIR(userId || 'demo-user', payload);
+            // Use the logged-in user id from context (falls back to 000000000000000000000000)
+            const res = await firAPI.createFIR(userId || '000000000000000000000000', payload);
             if (res?.data?.success) {
                 alert('FIR draft submitted and saved (status: draft).');
                 setStep(1);
@@ -149,111 +155,96 @@ export default function FIRGenerator() {
         }
     };
 
+    const stepLabels = [t('fir.incidentDetails'), t('fir.yourDetails'), t('fir.additionalDetails'), t('fir.draftTitle')];
+
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4">
+        <div className="page-bg py-12 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                        <DocumentTextIcon className="w-8 h-8 text-indigo-600" />
-                        FIR/Complaint Generator
+                    <span className="section-tag"><DocumentTextIcon className="w-3.5 h-3.5" />FIR Generator</span>
+                    <h1 className="text-4xl font-black mb-2" style={{ color: '#f1f5f9', letterSpacing: '-0.02em' }}>
+                        {t('fir.title')}
                     </h1>
-                    <p className="text-gray-600">Generate a professional FIR (First Information Report) or complaint</p>
+                    <p style={{ color: '#64748b' }}>{t('fir.subtitle')}</p>
+                </div>
+
+                {/* Step Progress */}
+                <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-2">
+                    {stepLabels.map((label, i) => (
+                        <React.Fragment key={i}>
+                            <div className="flex items-center gap-2 flex-shrink-0">
+                                <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
+                                    style={{
+                                        background: step > i + 1 ? 'linear-gradient(135deg,#22c55e,#16a34a)' : step === i + 1 ? 'linear-gradient(135deg,#6366f1,#4f46e5)' : 'rgba(255,255,255,0.06)',
+                                        color: step >= i + 1 ? 'white' : '#475569',
+                                    }}>
+                                    {step > i + 1 ? '✓' : i + 1}
+                                </div>
+                                <span className="text-xs font-medium hidden sm:block" style={{ color: step === i + 1 ? '#a5b4fc' : '#475569' }}>{label}</span>
+                            </div>
+                            {i < stepLabels.length - 1 && (
+                                <div className="flex-1 h-px min-w-[1rem]" style={{ background: step > i + 1 ? '#22c55e' : 'rgba(255,255,255,0.06)' }} />
+                            )}
+                        </React.Fragment>
+                    ))}
                 </div>
 
                 {/* Language Selector */}
                 <div className="mb-6">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Select Language</label>
+                    <label className="label-dark">{t('fir.selectLanguage')}</label>
                     <select
                         value={language}
-                        onChange={(e) => setLanguage(e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                        onChange={(e) => { setLanguage(e.target.value); i18n.changeLanguage(e.target.value); }}
+                        className="select-dark w-full py-2.5 px-4"
                     >
                         <option value="en">English</option>
-                        <option value="ta">Tamil</option>
-                        <option value="hi">Hindi</option>
-                        <option value="te">Telugu</option>
-                        <option value="ml">Malayalam</option>
-                        <option value="ka">Kannada</option>
+                        <option value="ta">தமிழ் (Tamil)</option>
+                        <option value="hi">हिंदी (Hindi)</option>
+                        <option value="te">తెలుగు (Telugu)</option>
+                        <option value="ml">മലയാളം (Malayalam)</option>
+                        <option value="ka">ಕನ್ನಡ (Kannada)</option>
                     </select>
                 </div>
 
                 {/* Steps */}
                 {step === 1 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                        <div className="bg-white rounded-lg shadow p-6">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Incident Details</h2>
+                    <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+                        <div className="glass-card rounded-2xl p-7">
+                            <h2 className="text-xl font-black mb-5" style={{ color: '#f1f5f9' }}>{t('fir.incidentDetails')}</h2>
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">FIR Title *</label>
-                                    <input
-                                        type="text"
-                                        name="title"
-                                        value={formData.title}
-                                        onChange={handleInputChange}
-                                        placeholder="e.g., Phone Theft Complaint"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.titleLabel')}</label>
+                                    <input type="text" name="title" value={formData.title} onChange={handleInputChange}
+                                        placeholder={t('fir.titlePlaceholder')} className="input-dark" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Crime Category *</label>
-                                    <select
-                                        name="crimeCategory"
-                                        value={formData.crimeCategory}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    >
-                                        <option value="">Select a crime category</option>
-                                        {crimeCategoryOptions.map((cat) => (
-                                            <option key={cat} value={cat}>
-                                                {cat}
-                                            </option>
-                                        ))}
+                                    <label className="label-dark">{t('fir.crimeCategory')}</label>
+                                    <select name="crimeCategory" value={formData.crimeCategory} onChange={handleInputChange} className="select-dark w-full py-3 px-4">
+                                        <option value="">{t('fir.selectCategory')}</option>
+                                        {crimeCategoryOptions.map(cat => <option key={cat} value={cat}>{cat}</option>)}
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Incident Details *</label>
-                                    <textarea
-                                        name="incidentDetails"
-                                        value={formData.incidentDetails}
-                                        onChange={handleInputChange}
-                                        placeholder="Describe what happened in detail..."
-                                        rows="5"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.detailsLabel')}</label>
+                                    <textarea name="incidentDetails" value={formData.incidentDetails} onChange={handleInputChange}
+                                        placeholder={t('fir.detailsPlaceholder')} rows="5" className="input-dark resize-none" />
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Incident Date</label>
-                                        <input
-                                            type="date"
-                                            name="incidentDate"
-                                            value={formData.incidentDate}
-                                            onChange={handleInputChange}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                        />
+                                        <label className="label-dark">{t('fir.dateLabel')}</label>
+                                        <input type="date" name="incidentDate" value={formData.incidentDate} onChange={handleInputChange} className="input-dark" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                                        <input
-                                            type="text"
-                                            name="incidentLocation"
-                                            value={formData.incidentLocation}
-                                            onChange={handleInputChange}
-                                            placeholder="Where did it happen?"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                        />
+                                        <label className="label-dark">{t('fir.locationLabel')}</label>
+                                        <input type="text" name="incidentLocation" value={formData.incidentLocation} onChange={handleInputChange}
+                                            placeholder={t('fir.locationPlaceholder')} className="input-dark" />
                                     </div>
                                 </div>
-                                <div className="flex gap-3">
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={() => setStep(2)}
-                                        className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
-                                    >
-                                        Next
-                                    </motion.button>
+                                <div className="flex gap-3 pt-2">
+                                    <button onClick={() => setStep(2)} className="btn-primary px-8 py-3">
+                                        <span className="relative z-10">{t('fir.buttonNext')} →</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -261,69 +252,37 @@ export default function FIRGenerator() {
                 )}
 
                 {step === 2 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                        <div className="bg-white rounded-lg shadow p-6">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Details</h2>
+                    <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+                        <div className="glass-card rounded-2xl p-7">
+                            <h2 className="text-xl font-black mb-5" style={{ color: '#f1f5f9' }}>{t('fir.yourDetails')}</h2>
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.complainantDetails.name}
-                                        onChange={handleComplainantChange}
-                                        placeholder="Your name"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.fullNameLabel')}</label>
+                                    <input type="text" name="name" value={formData.complainantDetails.name} onChange={handleComplainantChange}
+                                        placeholder={t('fir.fullNamePlaceholder')} className="input-dark" />
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="label-dark">{t('fir.phoneLabel')}</label>
+                                        <input type="tel" name="phone" value={formData.complainantDetails.phone} onChange={handleComplainantChange}
+                                            placeholder={t('fir.phonePlaceholder')} className="input-dark" />
+                                    </div>
+                                    <div>
+                                        <label className="label-dark">{t('fir.emailLabel')}</label>
+                                        <input type="email" name="email" value={formData.complainantDetails.email} onChange={handleComplainantChange}
+                                            placeholder={t('fir.emailPlaceholder')} className="input-dark" />
+                                    </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.complainantDetails.phone}
-                                        onChange={handleComplainantChange}
-                                        placeholder="Your phone number"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.addressLabel')}</label>
+                                    <textarea name="address" value={formData.complainantDetails.address} onChange={handleComplainantChange}
+                                        placeholder={t('fir.addressPlaceholder')} rows="3" className="input-dark resize-none" />
                                 </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.complainantDetails.email}
-                                        onChange={handleComplainantChange}
-                                        placeholder="Your email"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
-                                    <textarea
-                                        name="address"
-                                        value={formData.complainantDetails.address}
-                                        onChange={handleComplainantChange}
-                                        placeholder="Your address"
-                                        rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
-                                </div>
-                                <div className="flex gap-3">
-                                    <button
-                                        onClick={() => setStep(1)}
-                                        className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
-                                    >
-                                        Back
+                                <div className="flex gap-3 pt-2">
+                                    <button onClick={() => setStep(1)} className="btn-outline px-8 py-3">{t('fir.buttonBack')}</button>
+                                    <button onClick={() => setStep(3)} className="btn-primary px-8 py-3">
+                                        <span className="relative z-10">{t('fir.buttonNext')} →</span>
                                     </button>
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={() => setStep(3)}
-                                        className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
-                                    >
-                                        Next
-                                    </motion.button>
                                 </div>
                             </div>
                         </div>
@@ -331,62 +290,33 @@ export default function FIRGenerator() {
                 )}
 
                 {step === 3 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                        <div className="bg-white rounded-lg shadow p-6">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Details</h2>
+                    <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+                        <div className="glass-card rounded-2xl p-7">
+                            <h2 className="text-xl font-black mb-5" style={{ color: '#f1f5f9' }}>{t('fir.additionalDetails')}</h2>
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Suspect Name (if known)</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.suspectDetails.name}
-                                        onChange={handleSuspectChange}
-                                        placeholder="Suspect name"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.suspectNameLabel')}</label>
+                                    <input type="text" name="name" value={formData.suspectDetails.name} onChange={handleSuspectChange}
+                                        placeholder={t('fir.suspectNamePlaceholder')} className="input-dark" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Suspect Description</label>
-                                    <textarea
-                                        name="description"
-                                        value={formData.suspectDetails.description}
-                                        onChange={handleSuspectChange}
-                                        placeholder="Physical description, clothing, etc."
-                                        rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                    />
+                                    <label className="label-dark">{t('fir.suspectDescLabel')}</label>
+                                    <textarea name="description" value={formData.suspectDetails.description} onChange={handleSuspectChange}
+                                        placeholder={t('fir.suspectDescPlaceholder')} rows="3" className="input-dark resize-none" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Evidence Available</label>
-                                    <textarea
-                                        placeholder="List evidence: e.g., CCTV footage, witness contact, photos, etc."
-                                        rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-                                        onChange={(e) => {
-                                            setFormData((prev) => ({
-                                                ...prev,
-                                                evidence: e.target.value.split('\n').filter((e) => e.trim()),
-                                            }));
-                                        }}
-                                    />
+                                    <label className="label-dark">{t('fir.evidenceLabel')}</label>
+                                    <textarea placeholder={t('fir.evidencePlaceholder')} rows="3" className="input-dark resize-none"
+                                        onChange={(e) => setFormData(prev => ({ ...prev, evidence: e.target.value.split('\n').filter(e => e.trim()) }))} />
                                 </div>
-                                <div className="flex gap-3">
-                                    <button
-                                        onClick={() => setStep(2)}
-                                        className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
-                                    >
-                                        Back
+                                <div className="flex gap-3 pt-2">
+                                    <button onClick={() => setStep(2)} className="btn-outline px-8 py-3">{t('fir.buttonBack')}</button>
+                                    <button onClick={generateFIR} disabled={loading} className="btn-primary px-8 py-3" style={{ opacity: loading ? 0.7 : 1 }}>
+                                        <span className="relative z-10 flex items-center gap-2">
+                                            {loading && <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>}
+                                            {loading ? t('fir.buttonGenerating') : `⚡ ${t('fir.buttonGenerate')}`}
+                                        </span>
                                     </button>
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={generateFIR}
-                                        disabled={loading}
-                                        className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-gray-400 transition"
-                                    >
-                                        {loading ? 'Generating...' : 'Generate FIR'}
-                                    </motion.button>
                                 </div>
                             </div>
                         </div>
@@ -394,50 +324,37 @@ export default function FIRGenerator() {
                 )}
 
                 {step === 4 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                        <div className="bg-white rounded-lg shadow p-6">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">Your FIR Draft</h2>
-                            <div className="bg-gray-50 p-6 rounded-lg mb-4 max-h-96 overflow-y-auto border border-gray-200">
-                                <pre className="whitespace-pre-wrap text-sm text-gray-800 font-mono">{firDraft}</pre>
+                    <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+                        <div className="glass-card rounded-2xl p-7">
+                            <div className="flex items-center gap-3 mb-5">
+                                <span className="badge badge-green">✓ Draft Generated</span>
+                                <h2 className="text-xl font-black" style={{ color: '#f1f5f9' }}>{t('fir.draftTitle')}</h2>
                             </div>
-                            <div className="flex gap-3">
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => setStep(1)}
-                                    className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
-                                >
-                                    Create New
-                                </motion.button>
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={submitDraft}
-                                    disabled={loading}
-                                    className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-gray-400 transition"
-                                >
-                                    {loading ? 'Submitting...' : 'Submit Draft'}
-                                </motion.button>
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={downloadPDF}
-                                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2"
-                                >
-                                    <ArrowDownTrayIcon className="w-5 h-5" />
-                                    Download
-                                </motion.button>
+                            <div className="rounded-xl p-5 mb-5 max-h-96 overflow-y-auto"
+                                style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                                <pre className="whitespace-pre-wrap text-sm font-mono" style={{ color: '#94a3b8', lineHeight: '1.7' }}>{firDraft}</pre>
+                            </div>
+                            <div className="flex flex-wrap gap-3">
+                                <button onClick={() => setStep(1)} className="btn-outline px-6 py-2.5 text-sm">{t('fir.buttonCreateNew')}</button>
+                                <button onClick={submitDraft} disabled={loading} className="btn-primary px-6 py-2.5 text-sm" style={{ opacity: loading ? 0.7 : 1 }}>
+                                    <span className="relative z-10 flex items-center gap-2">
+                                        {loading ? 'Saving...' : `💾 ${t('fir.buttonSubmitDraft')}`}
+                                    </span>
+                                </button>
+                                <button onClick={downloadPDF} className="btn-gold px-6 py-2.5 text-sm">
+                                    <ArrowDownTrayIcon className="w-4 h-4" />
+                                    {t('fir.buttonDownload')}
+                                </button>
                             </div>
                         </div>
                     </motion.div>
                 )}
 
                 {/* Disclaimer */}
-                <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <p className="text-sm text-yellow-800">
-                        <span className="font-semibold">⚠️ Important:</span> This is an AI-generated draft. Please review it carefully
-                        and consult with a lawyer before submitting to police.
-                    </p>
+                <div className="mt-8 flex items-start gap-3 rounded-xl px-5 py-4"
+                    style={{ background: 'rgba(234,179,8,0.06)', border: '1px solid rgba(234,179,8,0.15)' }}>
+                    <span style={{ color: '#ca8a04' }}>⚠</span>
+                    <p className="text-sm" style={{ color: '#a16207' }}>{t('fir.disclaimer')}</p>
                 </div>
             </div>
         </div>

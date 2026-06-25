@@ -36,17 +36,17 @@ export function AuthProvider({ children }) {
         if (res.data?.success) {
             const { token: newToken, user: newUser } = res.data.data;
             setToken(newToken);
-            setUser({ id: newUser.id, name: newUser.name, email: newUser.email });
+            setUser({ id: newUser.id, name: newUser.name, email: newUser.email, role: newUser.role });
         }
         return res.data;
     };
 
-    const register = async (name, email, password) => {
-        const res = await apiClient.post('/auth/register', { name, email, password });
+    const register = async (name, email, password, role = 'user') => {
+        const res = await apiClient.post('/auth/register', { name, email, password, role });
         if (res.data?.success) {
             const { token: newToken, user: newUser } = res.data.data;
             setToken(newToken);
-            setUser({ id: newUser.id, name: newUser.name, email: newUser.email });
+            setUser({ id: newUser.id, name: newUser.name, email: newUser.email, role: newUser.role || role });
         }
         return res.data;
     };

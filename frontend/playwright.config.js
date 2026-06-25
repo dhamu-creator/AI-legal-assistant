@@ -8,7 +8,7 @@ const config = {
     headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10000,
-    baseURL: process.env.FRONTEND_URL || 'http://localhost:5173',
+    baseURL: process.env.FRONTEND_URL || 'http://localhost:3000',
   },
 };
-module.exports = config;
+export default config;

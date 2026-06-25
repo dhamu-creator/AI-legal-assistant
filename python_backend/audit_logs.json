@@ -1,0 +1,249 @@
+[
+  {
+    "id": "02ed0973f0582167c7afe997",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-09T13:09:34.446069",
+    "details": {
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "c68a568317ffa79286175fc8",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-09T13:22:15.824820",
+    "details": {
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "57776430d8f5c1efd72ecd26",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-10T04:11:30.701673",
+    "details": {
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "56771661c8a7179c6a86b090",
+    "user_id": "f4df1bd64caf417b9fe7ef16",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-10T04:11:35.384915",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "439cadd5d211c1b302954355",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-10T05:32:33.490136",
+    "details": {
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "ad8767a6cef1c1f65cfefb76",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-10T05:39:33.635185",
+    "details": {
+      "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 26.715428661s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "473f5ae7e4e4d6e6fde75610",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-10T06:07:00.624698",
+    "details": {
+      "error_message": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "06d16e54a1e2a10268efce65",
+    "user_id": "system",
+    "action": "AI_API_FAILURE",
+    "resource": "gemini_model",
+    "method": "POST",
+    "status": "failed",
+    "timestamp": "2026-06-10T06:25:40.944322",
+    "details": {
+      "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 19.268161247s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}",
+      "action": "Executed heuristic fallback local engine parser (detect_crime)"
+    }
+  },
+  {
+    "id": "f52e8838339091c5a201f49f",
+    "user_id": "000000000000000000000000",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-10T06:55:33.074183",
+    "details": {
+      "crime_category": "Robbery"
+    }
+  },
+  {
+    "id": "a46c189ac930b357535734f1",
+    "user_id": "53e725c6ee4f49878d927742",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-16T08:40:36.472500",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "c20777578275fa6af14aaf0f",
+    "user_id": "1fcae1710898462c92366136",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-16T08:48:33.014780",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "c23fcd156dd78bdfe3137677",
+    "user_id": "735436368e3148b289c372e5",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-16T09:05:35.366266",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "2ecbbbcc201f58a1d73d7d24",
+    "user_id": "c5057aeaba7d4d9f9372edb2",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-17T09:02:26.113805",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "2aa4eeb2f68cff79c7dac2f5",
+    "user_id": "731944eadcd446e09fa0377a",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-24T10:40:05.819282",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "55f3859e13c52c73664b9b66",
+    "user_id": "675ef47bd7334fb18a33da7d",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-24T10:41:24.193172",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "008263375b85f97227d9095f",
+    "user_id": "eb4e615ff567472ba11b0159",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-24T12:36:41.928233",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "51bf25f277bc4a80c71a02e1",
+    "user_id": "67b5e28e0085405e96f00d5b",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-25T05:43:06.835937",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "7aaca86db094a4c16bbb19f4",
+    "user_id": "1b7a39c6434e44eca57de101",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-25T06:21:54.442790",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "8d7cceda15a36aa5ccc55471",
+    "user_id": "8657385943754e8b83e94c7d",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-25T06:26:42.531620",
+    "details": {
+      "crime_category": "Theft"
+    }
+  },
+  {
+    "id": "852c5259d1a0576e06e02ab7",
+    "user_id": "912f93a390fd43a6a630b8f7",
+    "action": "GENERATE_FIR",
+    "resource": "fir",
+    "method": "POST",
+    "status": "success",
+    "timestamp": "2026-06-25T06:27:41.650550",
+    "details": {
+      "crime_category": "Theft"
+    }
+  }
+]

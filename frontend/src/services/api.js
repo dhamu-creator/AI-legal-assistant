@@ -1,11 +1,14 @@
 import axios from 'axios';
 
 // Vite uses import.meta.env.VITE_* (not process.env.REACT_APP_*)
-// Default to '/api' so the Vite dev proxy (vite.config.js) forwards to localhost:5000
+// Default to '/api' so the Vite dev proxy (vite.config.js) forwards to localhost:8000
 export const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
-// Attach Authorization header from localStorage for all requests
-axios.interceptors.request.use((config) => {
+export const apiClient = axios.create({ baseURL: API_BASE_URL });
+
+// Single Isolated Request Interceptor 
+apiClient.interceptors.request.use(
+  (config) => {
     try {
         const token = localStorage.getItem('token');
         if (token) {
@@ -16,16 +19,11 @@ axios.interceptors.request.use((config) => {
         // ignore
     }
     return config;
-});
-
-export const apiClient = axios.create({ baseURL: API_BASE_URL });
-
-// Attach token from localStorage if present
-apiClient.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token');
-    if (token) config.headers = { ...(config.headers || {}), Authorization: `Bearer ${token}` };
-    return config;
-});
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export const chatAPI = {
     createSession: (userId, language) => apiClient.post(`/chat/session`, { userId, language }),
